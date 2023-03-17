@@ -14,6 +14,7 @@ const Imagen =(props)=>{
                     <p className="card-text" > {views} &#x1F440; </p>
 
                     <a href={ largeImageURL } target='_blank' 
+                        rel="noopener noreferrer"
                        className="btn btn-secondary">
                     Ver Imagen
                     </a>

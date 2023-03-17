@@ -19,7 +19,7 @@ class NavBar extends Component {
           />
 
         <React.Fragment >
-            <a className="navbar-brand" href="https://www.linkedin.com/in/rauljaimes826" target={"_blank"}>@RaulAJaimes</a>
+            <a className="navbar-brand" href="https://www.linkedin.com/in/rauljaimes826" target={"_blank"}  rel="noopener noreferrer">@RaulAJaimes</a>
         </React.Fragment>               
       </nav>
     );
