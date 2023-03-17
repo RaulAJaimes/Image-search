@@ -1,7 +1,7 @@
 import "./styles/App.css";
 import Buscador from "./componentes/Buscador";
 import Resultado from "./componentes/Resultado";
-import logo from "./assets/logo.svg";
+import NavBar from "./componentes/NavBar";
 import React, { Component } from "react";
 
 class App extends Component {
@@ -76,19 +76,24 @@ class App extends Component {
 
 
   render() {
+    
     return (
-      <div className="container">    
-        <div className="App-header" >
-          <Buscador datosBusqueda={this.datosBusqueda} />
-        </div>      
-        <React.Fragment > 
-          <Resultado 
-              imagenes = { 
-                this.state.imagenes }
-                pagAnterior={this.pagAnterior}
-                pagSiguiente={this.pagSiguiente}
-          />
-        </React.Fragment>       
+      
+      <div>       
+             <NavBar/> 
+        <body className="justify-content-md-center mt-5">
+              <Buscador 
+              datosBusqueda={this.datosBusqueda} 
+              />                      
+          <section className="container" > 
+            <Resultado 
+                imagenes = { 
+                  this.state.imagenes }
+                  pagAnterior={this.pagAnterior}
+                  pagSiguiente={this.pagSiguiente}
+            />
+          </section>  
+        </body>             
       </div>
     );
   }

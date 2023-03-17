@@ -21,7 +21,7 @@ const Paginacion = props => {
                     &larr;  
                 </button>
                 <React.Fragment>
-                    Pag
+                    Pag 
                 </React.Fragment>
             <button onClick={props.pagSiguiente}
                 type="button"  
