@@ -8,11 +8,55 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.busquedad{
-  
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.raul:hover {
+  color:#b8f904;
+  border-bottom: 1px solid white;
+}
+
+
+
+
+
+
+.bn_primary {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 7px 10px;
+  border: 1px solid #fafafa;
+  border-radius: 7px;
+  background: #ff41ff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff41ff), to(#e54fe8));
+  background: -moz-linear-gradient(top, #ff41ff, #e54fe8);
+  background: linear-gradient(to bottom, #ff41ff, #e54fe8);
+  -webkit-box-shadow: #fafafa 0px 0px 7px 0px;
+  -moz-box-shadow: #fafafa 0px 0px 7px 0px;
+  box-shadow: #fafafa 0px 0px 5px 0px;
+  text-shadow: #751977 -2px 2px 3px;
+  font: normal normal normal 16px arial;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.bn_primary:hover,
+.bn_primary:focus {
+  background: #ff4eff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff4eff), to(#ff5fff));
+  background: -moz-linear-gradient(top, #ff4eff, #ff5fff);
+  background: linear-gradient(to bottom, #ff4eff, #ff5fff);
+  color: #ffffff;
+  font-weight:bold;
+  text-decoration: none;
+}
+.bn_primary:active {
+  background: #bb28be;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bb28be), to(#e54fe8));
+  background: -moz-linear-gradient(top, #bb28be, #e54fe8);
+  background: linear-gradient(to bottom, #bb28be, #e54fe8);
 }

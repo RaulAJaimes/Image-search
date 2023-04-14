@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       termino: '',
       imagenes : [ ],
-      pagina: ''
+      pagina: 1,
+      total: 0
     };
   }
 
@@ -22,10 +23,16 @@ class App extends Component {
 
     fetch(url)
     .then( respuesta => respuesta.json())
-    .then(resultado => this.setState({ imagenes: resultado.hits}))
+    .then(resultado => this.setState({ 
+      imagenes: resultado.hits,
+      total: resultado.total
+    }))
   }
 
   datosBusqueda = (termino) => {
+    if (!termino.trim()) { // verifica si el término de búsqueda está vacío
+      return;
+    }
     this.setState({ 
       termino : termino,
       pagina: 1
@@ -59,8 +66,13 @@ class App extends Component {
   };
 
   pagSiguiente = () =>{
-    //leer state pag actual
+    //leer state pag actual y total de resultados
     let pagina = this.state.pagina;
+    const total = this.state.total;
+    //calcular máximo de páginas posibles
+    const maxPaginas = Math.ceil(total / 28);
+    //si la pag actual es igual al máximo de páginas, no avanzar más
+    if(pagina === maxPaginas) return null;
     //sumar 1 a la pag actual
     pagina+=1;
     //agregar cambio al state
@@ -98,6 +110,7 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
 

@@ -18,9 +18,9 @@ class NavBar extends Component {
             style={{ width: "50px", height: "50px" }}
           />
 
-        <React.Fragment >
-            <a className="navbar-brand" href="https://www.linkedin.com/in/rauljaimes826" target={"_blank"}  rel="noopener noreferrer">@RaulAJaimes</a>
-        </React.Fragment>               
+        <div >
+            <a className="navbar-brand raul" href="https://www.linkedin.com/in/rauljaimes826" target={"_blank"}  rel="noopener noreferrer">@RaulAJaimes</a>
+        </div>               
       </nav>
     );
   }
